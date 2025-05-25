@@ -1,0 +1,106 @@
+@media only screen and (max-width: 600px) {
+    .half-outside-arrow .slick-next {
+        right: 0;
+    }
+    .half-outside-arrow .slick-prev {
+        left: 0px;
+        border-radius: 0px 5px 5px 0px;
+    }
+    .flash-overlay-text {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .mobile-p-0 {
+        padding: 0 !important;
+    }
+    .whatsapp-icon {
+        bottom: 72px !important;
+        right: 11px !important;
+    }
+    .stock_out {
+        padding-left: 31px;
+        padding-right: 16px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .mobile {
+        display: block !important;
+    }
+    .desktop {
+        display: none !important;
+    }
+    .filter_title {
+        padding-top: 13px;
+    }
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .mobile_row {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+    .set_gap {
+        gap: 24px;
+    }
+    .pl_8 {
+        padding-left: 8px;
+    }
+    .w-527 {
+        width: 310px;
+    }
+    .p_code {
+        padding-top: 0;
+    }
+    .pl_30 {
+        padding-left: 0;
+    }
+    .mobile_pl_16 {
+        padding-left: 16px;
+    }
+    .pr_15 {
+        padding-right: 15px;
+    }
+    .aiz-carousel .slick-arrow {
+        width: 21px;
+        height: 23px;
+    }
+    .blog_bot_sec {
+        margin-bottom: 25px;
+    }
+    .avialable-amount {
+        padding-left: 15px;
+    }
+    .margin_top_14 {
+        margin-top: 14px;
+    }
+    .mobile-hor-swipe {
+        scrollbar-color: #000c50 transparent !important;
+    }
+    .nav_menu_bar li {
+        margin-bottom: 10px;
+    }
+    .font_24_mobile h2{
+        
+        font-size:24px;
+        text-align:center;
+    }
+    .mobile_mb{
+        margin-bottom:10px;
+    }
+    .select_color {
+    margin-left: 7px;
+}
+}
+@media only screen and (min-width: 900px) and (max-width: 1440px) {
+    .stock_out {
+        padding-left: 32px;
+        padding-right: 32px;
+        font-size: 19px;
+        font-weight: 700;
+    }
+    .w-527 {
+        width: 434px;
+    }
+}

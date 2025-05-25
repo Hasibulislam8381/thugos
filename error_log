@@ -1,0 +1,171 @@
+[15-Oct-2024 17:08:09 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[15-Oct-2024 17:43:13 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[20-Oct-2024 11:40:10 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[26-Oct-2024 19:43:47 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[28-Oct-2024 11:51:39 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[31-Oct-2024 00:43:14 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[31-Oct-2024 10:35:37 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[31-Oct-2024 10:36:57 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[31-Oct-2024 20:07:08 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[01-Nov-2024 18:28:09 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[02-Nov-2024 14:40:22 Asia/Dhaka] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'elegant4_elegan...', '88s]GG[6xWDI', Array)
+#1 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'elegant4_elegan...', '88s]GG[6xWDI', Array)
+#2 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(184): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1064): call_user_func(Object(Closure))
+#6 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1100): Illuminate\Database\Connection->getPdo()
+#7 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(442): Illuminate\Database\Connection->getReadPdo()
+#8 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(368): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(705): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from `...', Array)
+#10 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(672): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#11 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(376): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#12 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2414): Illuminate\Database\Connection->select('select * from `...', Array, true)
+#13 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2402): Illuminate\Database\Query\Builder->runSelect()
+#14 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2936): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#15 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2403): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#16 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(625): Illuminate\Database\Query\Builder->get(Array)
+#17 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(609): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#18 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php(294): Illuminate\Database\Eloquent\Builder->get(Array)
+#19 /home/elegant4/public_html/storage/framework/views/34580e4be303d0b224e62fe0b35b7bc61c77681a.php(2): Illuminate\Database\Eloquent\Builder->first()
+#20 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/elegant4/...')
+#21 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#22 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/elegant4/...', Array)
+#23 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/elegant4/...', Array)
+#24 /home/elegant4/public_html/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#25 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Facade\Ignition\Views\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#26 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#27 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#28 /home/elegant4/public_html/storage/framework/views/adde143b5f50ba18572eb192410ea08ca8d682a0.php(17): Illuminate\View\View->render()
+#29 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/elegant4/...')
+#30 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#31 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/elegant4/...', Array)
+#32 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/elegant4/...', Array)
+#33 /home/elegant4/public_html/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#34 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Facade\Ignition\Views\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#35 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#36 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#37 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#38 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#39 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#40 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#41 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#42 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#43 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#44 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Facade\Ignition\Exceptions\ViewException))
+#45 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Facade\Ignition\Exceptions\ViewException))
+#46 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Facade\Ignition\Exceptions\ViewException))
+#47 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `languages` where `code` = en limit 1) in /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+Stack trace:
+#0 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(672): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(376): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2414): Illuminate\Database\Connection->select('select * from `...', Array, true)
+#3 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2402): Illuminate\Database\Query\Builder->runSelect()
+#4 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2936): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#5 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2403): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(625): Illuminate\Database\Query\Builder->get(Array)
+#7 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(609): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php(294): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /home/elegant4/public_html/storage/framework/views/34580e4be303d0b224e62fe0b35b7bc61c77681a.php(2): Illuminate\Database\Eloquent\Builder->first()
+#10 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/elegant4/...')
+#11 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#12 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/elegant4/...', Array)
+#13 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/elegant4/...', Array)
+#14 /home/elegant4/public_html/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#15 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Facade\Ignition\Views\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#16 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#17 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#18 /home/elegant4/public_html/storage/framework/views/adde143b5f50ba18572eb192410ea08ca8d682a0.php(17): Illuminate\View\View->render()
+#19 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/elegant4/...')
+#20 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#21 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/elegant4/...', Array)
+#22 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/elegant4/...', Array)
+#23 /home/elegant4/public_html/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#24 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Facade\Ignition\Views\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#25 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#26 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#27 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#28 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#29 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#30 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#31 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#32 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#33 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#34 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Facade\Ignition\Exceptions\ViewException))
+#35 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Facade\Ignition\Exceptions\ViewException))
+#36 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Facade\Ignition\Exceptions\ViewException))
+#37 {main}
+
+Next Facade\Ignition\Exceptions\ViewException: SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `languages` where `code` = en limit 1) (View: /home/elegant4/public_html/resources/views/frontend/layouts/app.blade.php) in /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+Stack trace:
+#0 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(672): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(376): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2414): Illuminate\Database\Connection->select('select * from `...', Array, true)
+#3 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2402): Illuminate\Database\Query\Builder->runSelect()
+#4 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2936): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#5 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2403): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(625): Illuminate\Database\Query\Builder->get(Array)
+#7 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(609): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php(294): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /home/elegant4/public_html/resources/views/frontend/layouts/app.blade.php(2): Illuminate\Database\Eloquent\Builder->first()
+#10 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/elegant4/...')
+#11 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#12 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/elegant4/...', Array)
+#13 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/elegant4/...', Array)
+#14 /home/elegant4/public_html/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#15 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Facade\Ignition\Views\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#16 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#17 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#18 /home/elegant4/public_html/resources/views/errors/500.blade.php(17): Illuminate\View\View->render()
+#19 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/elegant4/...')
+#20 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#21 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/elegant4/...', Array)
+#22 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/elegant4/...', Array)
+#23 /home/elegant4/public_html/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#24 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Facade\Ignition\Views\Engines\CompilerEngine->get('/home/elegant4/...', Array)
+#25 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#26 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#27 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#28 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#29 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#30 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#31 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#32 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#33 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#34 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Facade\Ignition\Exceptions\ViewException))
+#35 /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Facade\Ignition\Exceptions\ViewException))
+#36 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Facade\Ignition\Exceptions\ViewException))
+#37 {main}
+  thrown in /home/elegant4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[02-Nov-2024 16:21:56 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[02-Nov-2024 22:19:51 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[04-Nov-2024 18:31:28 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[05-Nov-2024 12:58:44 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[05-Nov-2024 15:01:27 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[05-Nov-2024 15:29:27 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[06-Nov-2024 12:17:24 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[06-Nov-2024 12:35:21 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[06-Nov-2024 14:15:41 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[06-Nov-2024 14:30:29 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[06-Nov-2024 14:56:00 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[06-Nov-2024 15:26:53 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[06-Nov-2024 15:43:38 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[06-Nov-2024 19:30:05 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[07-Nov-2024 01:01:54 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[07-Nov-2024 01:31:07 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[07-Nov-2024 04:34:06 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[07-Nov-2024 13:37:15 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[07-Nov-2024 14:19:11 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[07-Nov-2024 14:48:00 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[08-Nov-2024 12:37:50 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[08-Nov-2024 16:23:07 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[08-Nov-2024 18:36:25 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[09-Nov-2024 11:23:05 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[09-Nov-2024 18:21:05 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[10-Nov-2024 12:13:46 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[13-Nov-2024 11:25:58 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49
+[13-Nov-2024 11:55:30 Asia/Dhaka] PHP Deprecated:  Optional parameter $phone declared before required parameter $order is implicitly treated as a required parameter in /home/elegant4/public_html/app/Utility/SmsUtility.php on line 49

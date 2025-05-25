@@ -1,0 +1,394 @@
+.blog_bot_sec {
+    background: #333;
+    padding: 15px;
+}
+
+.blog_read_more {
+    color: white;
+}
+
+.blog_read_more:hover {
+    color: #b0b4c9;
+    transition: 0.3s;
+}
+
+.home_gallery_m_bot_res {
+    margin-bottom: 10px;
+}
+
+.home_blog_m_bot_res {
+    margin-bottom: 30px;
+}
+
+.home_blog_m_bot_res:last-child {
+    margin-bottom: 0px;
+}
+
+.current_offer_count_down {
+    position: relative;
+    z-index: 9;
+    margin-right: 10px;
+    margin-bottom: -35px;
+}
+
+.cat_border {
+    overflow: hidden;
+    border: 1px solid #333 !important;
+}
+.cat_img {
+    transition: transform 1s ease-in-out;
+}
+.cat_img:hover {
+    transform: scale(1.2);
+}
+
+.brand_box {
+    background: #b0b4c9;
+    padding: 30px;
+}
+
+.marquee_data {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    background: #333;
+    color: white;
+    margin-bottom: 0 !important;
+    font-size: 14px !important;
+    padding: 5px 0;
+}
+
+.view_all_btn {
+    color: black;
+}
+
+.view_all_btn:hover {
+    transition: 0.4s;
+    color: #333;
+}
+
+.aiz-card-box {
+    padding: 0 5px 0 5px;
+}
+
+.panel_user {
+    margin-bottom: -3px;
+}
+
+hr {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.offer_text {
+    left: 5px !important;
+    padding: 3px 5px !important;
+    line-height: 15px !important;
+    position: relative !important;
+    top: 13px !important;
+    height: 20px !important;
+}
+
+.background_white {
+    background-color: #fff;
+}
+
+.subcategories-container {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 89%;
+    left: 0;
+    background-color: transparent;
+    border-top: none;
+    z-index: 999;
+}
+
+.brand_container {
+    /* width: 100%; */
+    display: none;
+    position: absolute;
+    top: 89%;
+    left: 64%;
+    right: 20%;
+    background-color: transparent;
+    border-top: none;
+    z-index: 999;
+}
+
+.nav__item_hov:hover .subcategories-container {
+    display: block;
+}
+
+.nav__item_hov:hover .brand_container {
+    display: block;
+}
+
+.subcategorie_inner {
+    padding: 20px;
+    margin-top: 12px;
+    max-height: 325px;
+    /* Set your desired maximum height here */
+    overflow-y: auto;
+}
+
+.subcategorie_inner::-webkit-scrollbar {
+    width: 10px;
+    background-color: #d9d9d9;
+}
+
+.subcategorie_inner::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: purple !important;
+}
+
+.nav_text a {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left !important;
+    justify-content: left !important;
+    padding-left: 0 !important;
+}
+
+.nav_text a:hover {
+    background-color: transparent !important;
+}
+
+.nav__item a {
+    display: flex;
+    padding: 5px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.nav_items a {
+    justify-content: left;
+    padding-top: 10px;
+    font-size: 14px;
+    padding-left: 0;
+}
+
+.nav_items a:hover {
+    border-bottom: 1px solid #cc0109;
+    cursor: pointer;
+    background-color: #fff !important;
+    border-radius: 0 !important;
+}
+
+.badge_cart {
+    padding: 3px 7px;
+    top: auto !important;
+}
+
+.quantity_input_number {
+    background: #b0b4c9;
+    width: 50px;
+    border: 1px solid #b0b4c9;
+    color: #333;
+    font-weight: 700;
+}
+
+.quantity_btn {
+    border-radius: 0 !important;
+}
+
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+    color: #fff;
+    background-color: #9196b7;
+    border-color: #9196b7;
+}
+
+.btn-secondary.focus,
+.btn-secondary:focus {
+    color: #fff;
+    background-color: #a3636f;
+    border-color: #a3636f;
+    box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+.return_to_shop {
+    background: white !important;
+    color: black !important;
+    text-transform: uppercase;
+}
+
+.order__summery tr {
+    border: 1px solid black;
+}
+
+/* login modal otp css start */
+.otp_btn {
+    right: 42px;
+    padding-top: 5px;
+    position: absolute;
+}
+
+/* otp */
+.otp-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* OTP input styles */
+.otp-container,
+.email-otp-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.otp-input,
+.email-otp-input {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.otp-input:focus,
+.email-otp-input:focus {
+    border-color: #007bff;
+}
+
+#verificationCode,
+#emailverificationCode {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#verificationCode:focus,
+#emailverificationCode:focus {
+    border-color: #007bff;
+}
+
+.email-otp {
+    margin-top: 25px;
+}
+
+.login_modal_dialog {
+    top: 23% !important;
+}
+
+.set_height .slick-list {
+    height: auto !important;
+}
+
+/* login modal otp css  */
+.quantity_btn:hover {
+    background-color: #333 !important;
+}
+
+.quantity_input_number:hover {
+    background-color: black !important;
+}
+
+.subscribe_btn:hover {
+    background: white !important;
+    border: 1px solid white !important;
+    color: black;
+    transition: 0.5s;
+}
+
+.blog_read_more:before {
+    content: "";
+    height: 2px;
+    background: #fcf8fa;
+    position: absolute;
+    top: 25px;
+    width: 105px;
+}
+
+.jssocials-share-whatsapp .jssocials-share-link {
+    background: #333;
+}
+
+.jssocials-share-linkedin .jssocials-share-link {
+    background: #333;
+}
+
+.jssocials-share-facebook .jssocials-share-link {
+    background: #333;
+}
+
+.jssocials-share-twitter .jssocials-share-link {
+    background: #333;
+}
+
+.jssocials-share-email .jssocials-share-link {
+    background: #333;
+}
+
+.jssocials-share-whatsapp .jssocials-share-link:hover {
+    background: black;
+    transition: 0.5s;
+}
+
+.jssocials-share-linkedin .jssocials-share-link:hover {
+    background: black;
+    transition: 0.5s;
+}
+
+.jssocials-share-facebook .jssocials-share-link:hover {
+    background: black;
+    transition: 0.5s;
+}
+
+.jssocials-share-twitter .jssocials-share-link:hover {
+    background: black;
+    transition: 0.5s;
+}
+
+.jssocials-share-email .jssocials-share-link:hover {
+    background: black;
+    transition: 0.5s;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Adjust to display 5 items */
+    grid-gap: 20px; /* Adjust the gap between items */
+}
+
+.grid-item {
+    position: relative;
+}
+.discount_text_css {
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+.product-price {
+    display: flex;
+    align-items: center;
+}
+.product_box_buynow a,
+div {
+    border-radius: 0 !important;
+}
