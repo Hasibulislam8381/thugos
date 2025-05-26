@@ -11572,6 +11572,6 @@ ul.social.colored [class*="linkedin"] {
     display: table !important;
 }
 .disabled-link {
-    background: rgb(145 150 183) !important;
+    background: rgb(170, 167, 167) !important;
     pointer-events: none;
 }

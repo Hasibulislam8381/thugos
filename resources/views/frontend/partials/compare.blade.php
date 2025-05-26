@@ -22,23 +22,23 @@
         </li>
 
         <li class="list-inline-item mr-3 border-right border-left-0 pr-3 pl-0">
-            <i class="fa-regular fa-user rounded-border panel_user color_white"></i>
+            <i class="fa-regular fa-user rounded-border panel_user "></i>
             <a href="{{ route('dashboard') }}"
-                class="text-reset d-inline-block py-2 nav_menu_text color_white">{{ translate('My Panel') }}</a>
+                class="text-reset d-inline-block py-2 nav_menu_text ">{{ translate('My Panel') }}</a>
         </li>
     @endif
 
     <li class="list-inline-item">
-        <span class="logout_icon"><i class="fa-solid fa-arrow-right-from-bracket color_white"></i></span> <a
+        <span class="logout_icon"><i class="fa-solid fa-arrow-right-from-bracket "></i></span> <a
             href="{{ route('logout') }}"
-            class="text-reset d-inline-block py-2 nav_menu_text  color_white">{{ translate('Logout') }}</a>
+            class="text-reset d-inline-block py-2 nav_menu_text  ">{{ translate('Logout') }}</a>
     </li>
 @else
     <!-- User is not authenticated, show login and registration links -->
 
-    <span class="pt-3 badge badge-inline badge-pill"><i class="fa-regular fa-user rounded-border color_white"></i><a
+    <span class="pt-3 badge badge-inline badge-pill"><i class="fa-regular fa-user rounded-border "></i><a
             href="{{ route('user_login') }}"
-            class="text-reset d-inline-block  py-2 nav_menu_text color_white">{{ translate('ACCOUNT') }}</a>
+            class="text-reset d-inline-block  py-2 nav_menu_text ">{{ translate('ACCOUNT') }}</a>
 
 
         {{-- <a href="{{ route('register') }}"

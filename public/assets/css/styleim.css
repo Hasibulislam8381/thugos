@@ -33,7 +33,6 @@
 
 .cat_border {
     overflow: hidden;
-    border: 1px solid #333 !important;
 }
 .cat_img {
     transition: transform 1s ease-in-out;

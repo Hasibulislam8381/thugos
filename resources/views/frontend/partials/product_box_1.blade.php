@@ -44,19 +44,21 @@
         </div>
     </div>
     <div class="">
+        <div class="d-flex justify-content-between">
         <h3 class="fw-600 fs-13 text-truncate-2 mb-0 h-35px product__name mt-2">
             <a href="{{ route('product', $product->slug) }}"
                 class="d-block text-reset">{{ $product->getTranslation('name') }}</a>
         </h3>
-        <div class="rating rating-sm mt-1">
+        {{-- <div class="rating rating-sm mt-1">
             {{ renderStarRating($product->rating) }}
-        </div>
-        <div class="fs-15 pb-2">
+        </div> --}}
+        <div class="fs-15 mt-2">
             @if (home_base_price($product) != home_discounted_base_price($product))
                 <del class="fw-600 opacity-50 mr-1">{{ home_base_price($product) }}</del>
             @endif
             <span class="fw-700 text-primary">{{ home_discounted_base_price($product) }}</span>
         </div>
+        </div> 
 
 
         @if (addon_is_activated('club_point'))
@@ -67,20 +69,7 @@
         @endif
 
         @if ($qty >= 1)
-            <div class="btn btn-primary fw-700 text-uppercase add_to_cart_btn"
-                onclick="showAddToCartModal('{{ $product->id }}')" data-toggle="tooltip" data-placement="left">
-                <i class="las la-shopping-cart fs-20 pad_bot_3 custom_icon"></i>Add To Cart
-
-            </div>
-        @else
-            <div class="text-center notify_pad">
-                <button class="notify_bg btn btn-primary fw-700 text-uppercase add_to_cart_btn"
-                    onclick="notifyMe({{ $product->id }})" data-toggle="tooltip"
-                    data-title="{{ translate('Notify Me') }}">Notify me</button>
-            </div>
-        @endif
-        @if ($qty >= 1)
-            <div class="product_box_buynow">
+            <div class="product_box_buynow mb-2">
                 @if ($product->attributes === '[]' && $product->colors === '[]')
                     <div class="btn btn-primary buy-now fw-700 second_button text-uppercase add_to_cart_btn_product w-100"
                         onclick="buyNow_temp({{ $product->id }})">
@@ -97,12 +86,26 @@
                 @endif
             </div>
         @else
-            <div class="text-center notify_pad">
+            <div class="text-center notify_pad mb-2">
                 <button class="notify_bg btn btn-primary fw-700 text-uppercase add_to_cart_btn" data-toggle="tooltip"
                     disabled>Stock Out</button>
             </div>
 
         @endif
+        @if ($qty >= 1)
+            <div class="btn btn-primary fw-700 text-uppercase add_to_cart_btn"
+                onclick="showAddToCartModal('{{ $product->id }}')" data-toggle="tooltip" data-placement="left">
+                <i class="las la-shopping-cart fs-20 pad_bot_3 custom_icon"></i>Add To Cart
+
+            </div>
+        @else
+            <div class="text-center notify_pad">
+                <button class="notify_bg btn btn-primary fw-700 text-uppercase add_to_cart_btn"
+                    onclick="notifyMe({{ $product->id }})" data-toggle="tooltip"
+                    data-title="{{ translate('Notify Me') }}">Notify me</button>
+            </div>
+        @endif
+        
 
     </div>
 

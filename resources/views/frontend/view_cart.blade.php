@@ -9,7 +9,9 @@
     $product_id = '';
     $delivery_charge = Session::get('delivery_charge');
     $category_ids = [];
+    
     foreach ($carts as $cart) {
+        
         $category_ids[] = $cart->product->category_id;
     }
     $liked_products = \App\Models\Product::whereIn('category_id', $category_ids)->limit(20)->get();

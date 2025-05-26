@@ -185,7 +185,7 @@ class CartController extends Controller
 
                 foreach ($carts as $key => $cartItem) {
                     $product = Product::where('id', $cartItem['product_id'])->first();
-                    if ($product->auction_product == 1) {
+                    if (@$product->auction_product == 1) {
                         return array(
                             'status' => 0,
                             'cart_count' => count($carts),

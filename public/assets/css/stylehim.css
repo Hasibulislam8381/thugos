@@ -67,7 +67,7 @@ body {
 }
 
 .footer_background {
-    background-color: #b0b4c9;
+    background-color: #e2e3e5;
 }
 
 .footer_background a {
@@ -105,8 +105,8 @@ body {
 
 .subscribe_btn {
     border-radius: 0px 30px 30px 0px;
-    background: #b0b4c9;
-    border: 1px solid #b0b4c9;
+    background: #e2e3e5;
+    border: 1px solid #e2e3e5;
     color: #333;
 }
 

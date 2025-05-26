@@ -143,57 +143,75 @@
              @endif
              <!--@if ($key == 0) checked @endif-->
               <form id="option-choice-form"> @csrf <input type="hidden" name="id" value="{{ $detailedProduct->id }}">
-              
-                @if (is_array(json_decode($detailedProduct->colors)) && count(json_decode($detailedProduct->colors)) > 0) <div class="row mobile_row no-gutters">
-                  <div class="col-md-3 col-sm-3 col-3">
-                    <div class="my-2 select_color">{{ translate('Select Color') }}:</div>
-                  
-                  </div>
-    @php
-    // Group by color and take the first image for each distinct color
-    $firstImages = $detailedProduct->stocks->groupBy(function($stock) {
-        return explode('-', $stock->variant)[0];  // Extract color part
-    })->map(function($group) {
-        return $group->first()->image;  // Get the first stock image for each color
-    })->values();  // Reset the keys to numeric
-
-   
-@endphp
-       
-        <div class="col-md-9 col-sm-9 col-9">
-          <div class="aiz-radio-inline"> @foreach (json_decode($detailedProduct->colors) as $key => $color) <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip" data-title="{{ \App\Models\Color::where('code', $color)->first()->name }}">
-              <input type="radio" name="color" value="{{ \App\Models\Color::where('code', $color)->first()->name }}" @if ($key == 0) checked @endif>
-              <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
-                
-              @if (isset($firstImages[$key]) && $firstImages[$key])  <!-- Check if the key exists and the image is not null -->
-                <span class="d-inline-block rounded">
-                    <img src="{{ uploaded_asset($firstImages[$key]) }}" class="" width="40" height="60" alt="">
-                </span>
-            
-               
-            @endif
-              </span>
-            </label> @endforeach </div>
+              @if (is_array(json_decode($detailedProduct->colors)) && count(json_decode($detailedProduct->colors)) > 0)
+    <div class="row mobile_row no-gutters align-items-center my-2">
+        <!-- Color Label -->
+        <div class="col-md-3 col-sm-3 col-3">
+            <div class="select_color">{{ translate('Select Color') }}:</div>
         </div>
-        
-        <!--Size-->
-         @if ($detailedProduct->choice_options != null) @foreach (json_decode($detailedProduct->choice_options) as $key => $choice) <div class="row no-gutters">
-              
-                  <div class="col-lg-3 col-md-4 col-sm-3 col-4">
-                    <div class="my-2 select_color">Select {{ \App\Models\Attribute::find($choice->attribute_id)->getTranslation('name') }}:</div>
-                  </div>
-                  <div class="my-2 col-lg-9 col-md-8 col-sm-9 col-8">
-                    <div class="aiz-radio-inline"> @foreach ($choice->values as $key => $value) <label class="aiz-megabox pl-0 mr-2">
-                        <input type="radio" name="attribute_id_{{ $choice->attribute_id }}" value="{{ $value }}" @if ($key == 0) checked @endif>
-                        <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
-                          {{ $value }}
+
+        <!-- Color Options -->
+        @php
+            // Group by color and take the first image for each distinct color
+            $firstImages = $detailedProduct->stocks->groupBy(function($stock) {
+                return explode('-', $stock->variant)[0];  // Extract color part
+            })->map(function($group) {
+                return $group->first()->image;  // Get the first stock image for each color
+            })->values();  // Reset the keys to numeric
+        @endphp
+
+        <div class="col-md-9 col-sm-9 col-9">
+            <div class="aiz-radio-inline d-flex flex-wrap align-items-center">
+                @foreach (json_decode($detailedProduct->colors) as $key => $color)
+                    @php
+                        $colorName = \App\Models\Color::where('code', $color)->first()->name;
+                    @endphp
+                    <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip" data-title="{{ $colorName }}">
+                        <input type="radio" name="color" value="{{ $colorName }}" @if ($key == 0) checked @endif>
+                        <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-0">
+                            @if (isset($firstImages[$key]) && $firstImages[$key])
+                                <span class="d-inline-block rounded">
+                                    <img src="{{ uploaded_asset($firstImages[$key]) }}" width="40" height="60" alt="">
+                                </span>
+                            @endif
                         </span>
-                      </label> @endforeach </div>
-                  </div>
-                </div> @endforeach @endif
-        <!--Size-->
+                    </label>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <!-- Size Options (if available) -->
+    @if ($detailedProduct->choice_options != null)
+        @foreach (json_decode($detailedProduct->choice_options) as $key => $choice)
+            <div class="row no-gutters align-items-center my-2">
+                <!-- Size Label -->
+                <div class="col-md-3 col-sm-3 col-3">
+                    <div class="select_color">
+                        Select {{ \App\Models\Attribute::find($choice->attribute_id)->getTranslation('name') }}:
+                    </div>
                 </div>
-                <hr> @endif 
+
+                <!-- Size Options -->
+                <div class="col-md-9 col-sm-9 col-9">
+                    <div class="aiz-radio-inline d-flex flex-wrap align-items-center">
+                        @foreach ($choice->values as $i => $value)
+                            <label class="aiz-megabox pl-0 mr-2 mb-0">
+                                <input type="radio" name="attribute_id_{{ $choice->attribute_id }}" value="{{ $value }}" @if ($i == 0) checked @endif>
+                                <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3">
+                                    {{ $value }}
+                                </span>
+                            </label>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    @endif
+@endif
+
+               
+                <hr> 
                 <div class="row mobile_row no-gutters">
                   {{-- <div class="col-sm-12 col-12"> {!! $detailedProduct->short_description !!} </div> --}}
                 </div>
