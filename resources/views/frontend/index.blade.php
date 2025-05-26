@@ -77,50 +77,58 @@
     {{-- Flash Deal --}}
     @php
         $flash_deals = \App\Models\FlashDeal::where('status', 1)->get();
-    @endphp
-    @if ($flash_deals->isNotEmpty())
-        <section class="home_page_sec_pad_25 current_offer_res mb-4">
-            <div class="container">
-                <div class="px-2 py-4 px-md-4 py-md-3 bg-white shadow-sm rounded">
-                    <div class="d-flex align-items-baseline">
-                        <h3 class="h5 fw-700 mb-0">
-                            <span class="border-width-2 pb-3 d-inline-block">{{ translate('Flash Sale') }}</span>
-                        </h3>
-                    </div>
-                    <div class="row gutters-10 mt-2">
-                        @foreach ($flash_deals as $key => $flash_deal)
-                            @if (
-                                $flash_deal != null &&
-                                    strtotime(date('Y-m-d H:i:s')) >= $flash_deal->start_date &&
-                                    strtotime(date('Y-m-d H:i:s')) <= $flash_deal->end_date)
-                                <div class="col-xl-4 col-md-4 col-lg-4 col-sm-6  col-6 mb-3">
-                                    <div class="mb-3 mb-lg-0 position-relative">
-                                        <div class="banner_bot_text text-uppercase mt-1 flash_sale_count_down">
-                                            <div class="aiz-count-down justify-content-end ml-auto ml-lg-3 align-items-center current_offer_count_down"
-                                                data-date="{{ date('Y/m/d H:i:s', $flash_deal->end_date) }}"></div>
-                                        </div>
 
-                                        <a href="{{ route('flash-deal-details', $flash_deal->slug) }}"
-                                            class="d-block text-reset">
-                                            <div class="banner_img_main_div">
-                                                <img src="{{ static_asset('assets/img/placeholder-rect.jpg') }}"
-                                                    data-src="{{ uploaded_asset($flash_deal->p_image) }}"
-                                                    alt="{{ env('APP_NAME') }} promo"
-                                                    class="img-fluid lazyload w-100 banner_img">
-                                                <div class="flash-overlay">
-                                                    <div class="flash-overlay-text">{{ $flash_deal->title }}</div>
-                                                </div>
+        $valid_flash_deals = $flash_deals->filter(function ($deal) {
+            $now = strtotime(date('Y-m-d H:i:s'));
+            return $deal !== null && $now >= $deal->start_date && $now <= $deal->end_date;
+        });
+
+    @endphp
+    @if ($valid_flash_deals->isNotEmpty())
+        @if ($flash_deals->isNotEmpty())
+            <section class="home_page_sec_pad_25 current_offer_res mb-4">
+                <div class="container">
+                    <div class="px-2 py-4 px-md-4 py-md-3 bg-white shadow-sm rounded">
+                        <div class="d-flex align-items-baseline">
+                            <h3 class="h5 fw-700 mb-0">
+                                <span class="border-width-2 pb-3 d-inline-block">{{ translate('Flash Sale') }}</span>
+                            </h3>
+                        </div>
+                        <div class="row gutters-10 mt-2">
+                            @foreach ($flash_deals as $key => $flash_deal)
+                                @if (
+                                    $flash_deal != null &&
+                                        strtotime(date('Y-m-d H:i:s')) >= $flash_deal->start_date &&
+                                        strtotime(date('Y-m-d H:i:s')) <= $flash_deal->end_date)
+                                    <div class="col-xl-4 col-md-4 col-lg-4 col-sm-6  col-6 mb-3">
+                                        <div class="mb-3 mb-lg-0 position-relative">
+                                            <div class="banner_bot_text text-uppercase mt-1 flash_sale_count_down">
+                                                <div class="aiz-count-down justify-content-end ml-auto ml-lg-3 align-items-center current_offer_count_down"
+                                                    data-date="{{ date('Y/m/d H:i:s', $flash_deal->end_date) }}"></div>
                                             </div>
 
-                                        </a>
+                                            <a href="{{ route('flash-deal-details', $flash_deal->slug) }}"
+                                                class="d-block text-reset">
+                                                <div class="banner_img_main_div">
+                                                    <img src="{{ static_asset('assets/img/placeholder-rect.jpg') }}"
+                                                        data-src="{{ uploaded_asset($flash_deal->p_image) }}"
+                                                        alt="{{ env('APP_NAME') }} promo"
+                                                        class="img-fluid lazyload w-100 banner_img">
+                                                    <div class="flash-overlay">
+                                                        <div class="flash-overlay-text">{{ $flash_deal->title }}</div>
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            @endif
-                        @endforeach
+                                @endif
+                            @endforeach
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        @endif
     @endif
     {{-- gallery --}}
     <div id="section_home_gallery">
@@ -306,7 +314,7 @@
             </div>
         </section>
     @endif
-    @if (get_setting('top10_brands') != null)
+    {{-- @if (get_setting('top10_brands') != null)
         <section class="mb-4">
             <div class="container">
                 <div class="row gutters-10">
@@ -352,10 +360,10 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
 
-    @if (get_setting('home_customer_review') != null)
+    {{-- @if (get_setting('home_customer_review') != null)
         <section class="mb-4">
             <div class="container">
                 <div class="row gutters-10">
@@ -398,7 +406,7 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
     {{-- Banner Section 2 --}}
     @if (get_setting('home_banner2_images') != null)

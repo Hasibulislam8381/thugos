@@ -1059,7 +1059,7 @@ hr {
 }
 
 .text-primary {
-    color: #000c50 !important;
+    color: #000 !important;
 }
 
 .text-soft-primary {
@@ -10253,7 +10253,7 @@ div.footable-loader > span.fooicon:after {
     -webkit-transform: translateY(-50%);
     width: 34px;
     height: 26px;
-    background: #000c50;
+    background: #000;
     /* border-radius: 0px 5px 5px 0px; */
     border: 0;
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),

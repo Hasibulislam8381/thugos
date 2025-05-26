@@ -179,10 +179,10 @@
         <!--Size-->
          @if ($detailedProduct->choice_options != null) @foreach (json_decode($detailedProduct->choice_options) as $key => $choice) <div class="row no-gutters">
               
-                  <div class="col-md-3 col-sm-3 col-3">
+                  <div class="col-lg-3 col-md-4 col-sm-3 col-4">
                     <div class="my-2 select_color">Select {{ \App\Models\Attribute::find($choice->attribute_id)->getTranslation('name') }}:</div>
                   </div>
-                  <div class="col-md-9 col-sm-9 col-9">
+                  <div class="my-2 col-lg-9 col-md-8 col-sm-9 col-8">
                     <div class="aiz-radio-inline"> @foreach ($choice->values as $key => $value) <label class="aiz-megabox pl-0 mr-2">
                         <input type="radio" name="attribute_id_{{ $choice->attribute_id }}" value="{{ $value }}" @if ($key == 0) checked @endif>
                         <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">

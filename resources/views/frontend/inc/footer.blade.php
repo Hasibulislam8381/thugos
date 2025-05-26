@@ -289,7 +289,7 @@
             <a href="{{ route('cart') }}" class="text-reset d-block text-center pb-2 pt-3">
                 <span
                     class="align-items-center  border border-white border-width-4 d-flex justify-content-center position-relative rounded-circle size-50px"
-                    style="background:#000c50;margin-top: -33px;box-shadow: 0px -5px 10px rgb(0 0 0 / 15%);border-color: #fff !important;">
+                    style="background:#000;margin-top: -33px;box-shadow: 0px -5px 10px rgb(0 0 0 / 15%);border-color: #fff !important;">
                     <i class="las la-shopping-bag la-2x text-white"></i>
                 </span>
                 <span
