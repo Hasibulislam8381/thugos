@@ -46,7 +46,7 @@
                 <div class="d-lg-none ml-auto mr-0 header_search_icon_res">
                     <a class="p-2 d-block text-reset" href="javascript:void(0);" data-toggle="class-toggle"
                         data-target=".front-header-search">
-                        <i class="las la-search la-flip-horizontal la-2x text-white"></i>
+                        <i class="las la-search la-flip-horizontal la-2x"></i>
                     </a>
                 </div>
 
