@@ -221,14 +221,14 @@
                         </div>
                         <input type="hidden" name="min_price" value="">
                         <input type="hidden" name="max_price" value="">
-                        <div
-                            class="row gutters-5 row-cols-xxl-6 row-cols-xl-6 row-cols-lg-6 row-cols-md-3 row-cols-2 pad_category_box">
+                      <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-4 row-cols-md-2 row-cols-2 pad_category_box">
                             @foreach ($products as $key => $product)
-                                <div class="col">
+                                
                                     @include('frontend.partials.product_box_1', ['product' => $product])
-                                </div>
+                        
                             @endforeach
                         </div>
+
                         <div class="aiz-pagination aiz-pagination-center mt-4">
                             {{ $products->appends(request()->input())->links() }}
                         </div>

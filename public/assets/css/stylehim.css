@@ -625,7 +625,7 @@ color: white;
 
 
 .nav_menu_bar li.active {
-    background: linear-gradient(to right, #333, #00137a); /* Gradient background */
+    background: linear-gradient(to right, #333, #333); /* Gradient background */
     
 }
 .list-inline-item:not(:last-child) {
