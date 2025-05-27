@@ -653,3 +653,26 @@ font-size: 17px !important;
     margin-right: 22px;
     border-radius: 10px !important;
 }
+.search-sidebar {
+     position: fixed;
+    top: 19px;
+    right: -100%;
+    width: 100%;
+    max-width: 284px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+    transition: right 0.3s ease-in-out;
+    padding: 1rem;
+}
+
+.search-sidebar.show {
+    right: 0;
+}
+
+.search-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

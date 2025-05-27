@@ -7,7 +7,7 @@
     $blogs = \App\Models\Blog::where('status', 1)->orderBy('created_at', 'desc')->limit(3)->get();
 @endphp
 
-
+@if ($blogs->count()>0)
 <section class="home_page_sec_pad_25">
 
     <div class="container">
@@ -59,4 +59,5 @@
                 style="border: none">{{ translate('View All Blogs') }}</a>
         </div> --}}
     </div>
-</section>
+</section> 
+@endif

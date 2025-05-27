@@ -43,12 +43,45 @@
                         </div>
                     @endif --}}
                 </div>
-                <div class="d-lg-none ml-auto mr-0 header_search_icon_res">
-                    <a class="p-2 d-block text-reset" href="javascript:void(0);" data-toggle="class-toggle"
-                        data-target=".front-header-search">
-                        <i class="las la-search la-flip-horizontal la-2x"></i>
-                    </a>
+              <!-- Trigger Icon (No changes needed) -->
+<div class="d-lg-none ml-auto mr-0 header_search_icon_res">
+    <a class="p-2 d-block text-reset" href="javascript:void(0);" id="openSidebar">
+        <i class="las la-search la-flip-horizontal la-2x"></i>
+    </a>
+</div>
+
+<!-- Sidebar Search Panel -->
+<div id="mobileSearchSidebar" class="search-sidebar d-none">
+    <div class="search-sidebar-content">
+        <button id="closeSidebar" class="btn btn-link text-right w-100"><i class="la la-times la-2x"></i></button>
+        <form action="{{ route('search') }}" method="GET" class="stop-propagation">
+            <div class="input-group mb-3">
+                <input style="color: #333" type="text" class="search_field border-lg form-control bg_nav"
+                                        id="searchMobile" name="keyword"
+                                        @isset($query)
+                                        value="{{ $query }}"
+                                    @endisset
+                                        placeholder="{{ translate('Search here..') }}" autocomplete="off">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="la la-search la-flip-horizontal"></i>
+                    </button>
                 </div>
+            </div>
+        </form>
+        <div class="typed-search-box bg-white rounded shadow-sm p-3" id="sidebar-search-results"
+             style="min-height: 200px; overflow-y: auto; max-height: 60vh;">
+            <div class="search-preloader d-none text-center py-3">
+                <div class="dot-loader">
+                    <div></div><div></div><div></div>
+                </div>
+            </div>
+            <div class="search-nothing d-none text-center fs-16">No results found</div>
+            <div  class="text-left search-content"></div>
+        </div>
+    </div>
+</div>
+
 
                 <div class="flex-grow-1 front-header-search d-flex align-items-center ">
                     <div class="position-relative flex-grow-1">
@@ -86,7 +119,7 @@
                             <div class="search-nothing d-none p-3 text-center fs-16">
 
                             </div>
-                            <div id="search-content" class="text-left">
+                            <div class="text-left search-content">
 
                             </div>
                         </div>
@@ -214,4 +247,20 @@
             marquee.start();
         });
     </script>
+    <script>
+    document.getElementById('openSidebar').addEventListener('click', function () {
+        document.getElementById('mobileSearchSidebar').classList.remove('d-none');
+        setTimeout(() => {
+            document.getElementById('mobileSearchSidebar').classList.add('show');
+        }, 10);
+    });
+
+    document.getElementById('closeSidebar').addEventListener('click', function () {
+        document.getElementById('mobileSearchSidebar').classList.remove('show');
+        setTimeout(() => {
+            document.getElementById('mobileSearchSidebar').classList.add('d-none');
+        }, 300);
+    });
+</script>
+
 @endpush
