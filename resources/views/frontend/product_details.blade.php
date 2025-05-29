@@ -288,13 +288,11 @@
                  
               </div>
               <div class="product_details_btn mt-3">
-                <a href="tel:+88{{ get_setting('contact_phone') }}" class="btn btn-primary buy-now fw-600 width_100" style="border: 1px solid #0a608b;background-color:#0a608b">
+                <a href="tel:+88{{ get_setting('contact_phone') }}" class="btn btn-primary buy-now fw-600 width_100" style="border: 1px solid #26452d;background-color:#26452d">
                     <i class="fa fa-phone"></i>
                     <span>  কল করতে ক্লিক করুন : {{ get_setting('contact_phone') }}</span>
                 </a>
             </div>
-            
-            
             <div class="product_details_btn mt-3">
               <a href="https://wa.me/{{ get_setting('contact_phone') }}" class="btn btn-primary buy-now fw-600 width_100" style="border: 1px solid #185a54;background-color:#185a54">
                   <i class="fab fa-whatsapp"></i>
