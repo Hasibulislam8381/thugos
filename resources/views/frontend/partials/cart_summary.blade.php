@@ -93,14 +93,11 @@
                                     </div>
                                 @endif
                             @endif
-
-
                         </div>
                     </tr>
                 @endif
-                @foreach ($carts as $key => $cartItem)
+               @foreach ($carts as $key => $cartItem)
                     @php
-
                         $product = \App\Models\Product::find($cartItem['product_id']);
                         $offer_discount = getOfferDiscount($product->id, $cartItem['quantity']);
 
@@ -109,32 +106,32 @@
 
                         $product_name_with_choice = $product->getTranslation('name');
                         if ($cartItem['variant'] != null) {
-                            $product_name_with_choice = $product->getTranslation('name') . ' - ' . $cartItem['variant'];
+                            $product_name_with_choice .= ' - ' . $cartItem['variant'];
                         }
                         $getColor = explode('-', $cartItem->variation);
-
                     @endphp
 
                     <tr class="cart_item">
                         <td class="product-name">
-                            <b>Product Name</b>
-
-                        </td>
-                        <td class="product-total text-right">
-                            {{ $product_name_with_choice }}
-
+                            <strong>{{ $product_name_with_choice }}</strong>
                             @if (@$getColor[0] || @$getColor[1] != '')
-                                ({{ @$getColor[0] }})
-                                ({{ @$getColor[1] }})
+                                <br>
+                                <small class="text-muted">Color: {{ @$getColor[0] }} {{ @$getColor[1] }}</small>
                             @endif
 
-                            <strong class="product-quantity">
-                                × {{ $cartItem['quantity'] }}
-                            </strong>
-
+                            @if (!empty($cartItem['type']))
+                                <br>
+                                <small class="text-muted">
+                                    Type: {{ $cartItem['type'] }}
+                                </small>
+                            @endif
+                        </td>
+                        <td class="product-total text-right">
+                            × {{ $cartItem['quantity'] }}
                         </td>
                     </tr>
                 @endforeach
+
             </tbody>
         </table>
 

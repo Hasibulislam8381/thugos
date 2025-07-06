@@ -19,9 +19,6 @@
 @endphp
 
 @section('content')
-
-
-
     <section class="mb-4 mt-5" id="cart-summary">
         <div class="container">
             @if ($carts && count($carts) > 0)
@@ -35,6 +32,7 @@
                                         $total = 0;
                                     @endphp
                                     @foreach ($carts as $key => $cartItem)
+                                  
                                         @php
                                             $product = \App\Models\Product::find($cartItem['product_id']);
                                             $offer_quantity = json_decode($product->offer_quantity);
@@ -95,6 +93,11 @@
                                                             @endif
                                                             <span
                                                                 class="fw-700 text-primary">৳{{ $cartItem['price'] }}</span>
+                                                                 @if (!empty($cartItem['type']))
+                                                                        <div class="text-muted mt-1">
+                                                                            <small><strong>Type:</strong> {{ $cartItem['type'] }}</small>
+                                                                        </div>
+                                                                    @endif
 
 
                                                         </div>
@@ -674,6 +677,8 @@
         $('input.delivery_charge[type="radio"]').click(function() {
             var price = Number($(".get__total__price").val());
             var delivery = price + Number(this.value);
+            console.log(this.value);
+            
             updateSessionVariable('delivery_charge', this.value);
 
 
@@ -688,17 +693,12 @@
 
             var radioValue = $(this).val();
             $(".delivery_charge").html(radioValue + 'tk');
-
-
             // updateSession('selected_radio', radioValue);
-
         });
-
-
         function updateSessionVariable(variableName, value) {
             $.ajax({
                 type: 'POST',
-                url: '/update-session',
+                  url: '{{ route("update-session") }}',
                 data: {
                     variableName: variableName,
                     value: value

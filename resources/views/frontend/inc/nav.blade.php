@@ -178,6 +178,9 @@
             <ul class="list-inline mb-0 pl-0 mobile-hor-swipe text-center nav_menu_bar">
 
                 @foreach ($categories as $key => $category)
+                 @if ($category->category_nav != 1)
+                        @continue
+                    @endif
                     @php
                         $isActive = request()->is('category/' . $category->slug);
                     @endphp

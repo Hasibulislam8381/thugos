@@ -216,11 +216,12 @@
                                     @endif
                                 </td>
                                 <td>
-                                    @if ($order->tracking_code != null)
-                                        {{ $order->tracking_code }}
+                                   @if ($order->tracking_code != null)
+                                        {{ \Illuminate\Support\Str::words($order->tracking_code, 2, '...') }}
                                     @else
                                         None
                                     @endif
+
                                 </td>
                                 @if (addon_is_activated('refund_request'))
                                     <td>

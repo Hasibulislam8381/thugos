@@ -129,7 +129,7 @@ Route::post('/product/variant_price', 'HomeController@variant_price')->name('pro
 Route::get('/shop/{slug}', 'HomeController@shop')->name('shop.visit');
 Route::get('/shop/{slug}/{type}', 'HomeController@filter_shop')->name('shop.visit.type');
 
-Route::post('/update-session', 'HomeController@updateSession');
+Route::post('/update-session', 'HomeController@updateSession')->name('update-session');;
 
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::post('/cart/show-cart-modal', 'CartController@showCartModal')->name('cart.showCartModal');

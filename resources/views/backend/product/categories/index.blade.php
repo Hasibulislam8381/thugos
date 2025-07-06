@@ -36,6 +36,7 @@
                     <th data-breakpoints="lg">{{translate('Banner')}}</th>
                     <th data-breakpoints="lg">{{translate('Logo')}}</th>
                     <th data-breakpoints="lg">{{translate('Featured')}}</th>
+                    <th data-breakpoints="lg">{{translate('Nav Category')}}</th>
                     <th data-breakpoints="lg">{{translate('Commission')}}</th>
                     <th width="10%" class="text-right">{{translate('Options')}}</th>
                 </tr>
@@ -76,6 +77,12 @@
                         <td>
                             <label class="aiz-switch aiz-switch-success mb-0">
                                 <input type="checkbox" onchange="update_featured(this)" value="{{ $category->id }}" <?php if($category->featured == 1) echo "checked";?>>
+                                <span></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="aiz-switch aiz-switch-success mb-0">
+                                <input type="checkbox" onchange="update_categoryNav(this)" value="{{ $category->id }}" <?php if($category->category_nav == 1) echo "checked";?>>
                                 <span></span>
                             </label>
                         </td>
@@ -121,6 +128,22 @@
                 else{
                     AIZ.plugins.notify('danger', '{{ translate('Something went wrong') }}');
                 }
+            });
+        }
+        function update_categoryNav(el){
+            if(el.checked){
+                var status = 1;
+            }
+            else{
+                var status = 0;
+            }
+            $.post('{{ route('categories.nav') }}', {_token:'{{ csrf_token() }}', id:el.value, status:status}, function(data){
+               if(data == 1){
+                    AIZ.plugins.notify('success', '{{ translate('Category Nav updated successfully') }}');
+                } else {
+                    AIZ.plugins.notify('danger', '{{ translate('You can select maximum 7 nav categories') }}');
+                }
+
             });
         }
     </script>

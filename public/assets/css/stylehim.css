@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
 body {
   font-family: 'Comic Neue', sans-serif !important;
-}
+} */
 /* @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
 
 body {
   font-family: 'Cabin', sans-serif;
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+     font-family: "Nunito Sans", sans-serif;
+}
 
 .nav_back_color {
     background: #fff;
@@ -589,7 +594,7 @@ width: 100%;
 padding-left: 30px;
 }
 .nav_back_color2 {
-    background-color: #e2e3e5;
+    background-color: #fff;
 }
 .min_width_698{
 min-height: 698px;

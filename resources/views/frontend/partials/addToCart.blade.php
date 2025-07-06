@@ -159,6 +159,7 @@
                         <div class="row no-gutters">
                             <div class="col-sm-3 col-3">
                                 <div class="opacity-50 mt-2">{{ translate('Color') }}:</div>
+                                <div style="margin-top: 36px" class="opacity-50">{{ translate('Type') }}:</div>
                             </div>
                             <div class="col-sm-9 col-9">
                                 <div class="aiz-radio-inline">
@@ -176,6 +177,11 @@
                                         </label>
                                     @endforeach
                                 </div>
+                               
+                                <select class="form-control" name="type">
+                                <option value="Drop Shoulder">Drop Shoulder</option>
+                                <option value="Half Sleeve">Half Sleeve</option>
+                            </select>
                             </div>
                         </div>
 

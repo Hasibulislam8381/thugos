@@ -200,6 +200,8 @@
                                 {{-- <th data-breakpoints="lg" class="text-uppercase">{{ translate('Delivery Type') }}</th> --}}
                                 <th data-breakpoints="lg" class="min-col text-center text-uppercase">{{ translate('Qty') }}
                                 </th>
+                                <th data-breakpoints="lg" class="min-col text-center text-uppercase">{{ translate('Type') }}
+                                </th>
                                 <th data-breakpoints="lg" class="min-col text-center text-uppercase">
                                     {{ translate('Price') }}</th>
                                 <th data-breakpoints="lg" class="min-col text-right text-uppercase">
@@ -272,6 +274,7 @@
                                         @endif
                                     </td> --}}
                                     <td class="text-center">{{ $orderDetail->quantity }}</td>
+                                    <td class="text-center">{{ $orderDetail->type??"null" }}</td>
                                     <td class="text-center">
                                         {{ single_price($orderDetail->price / $orderDetail->quantity) }}
                                     </td>

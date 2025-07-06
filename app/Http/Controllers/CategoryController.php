@@ -223,4 +223,20 @@ class CategoryController extends Controller
         Cache::forget('featured_categories');
         return 1;
     }
+ public function updateNavCategory(Request $request)
+{
+    $category = Category::findOrFail($request->id);
+
+    if ($request->status == 1) {
+        $navCount = Category::where('category_nav', 1)->count();
+        if ($navCount >= 7) {
+            return 0; // prevent update if 7 already selected
+        }
+    }
+
+    $category->category_nav = $request->status;
+    $category->save();
+    return 1;
+}
+
 }

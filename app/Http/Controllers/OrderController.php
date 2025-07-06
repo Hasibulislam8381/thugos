@@ -400,6 +400,8 @@ class OrderController extends Controller
                 }
                 //End of storing shipping cost
 
+                $order_detail->type = $cartItem['type'] ?? null;
+
                 $order_detail->quantity = $cartItem['quantity'];
                 $order_detail->save();
                 $offer_discount += getOfferDiscount($order_detail->product_id, $order_detail->quantity);

@@ -16,7 +16,6 @@
 @endphp
 
 @section('content')
-
     <section class="pt-5 mb-4 gry-bg">
         <div class="container">
             <form action="{{ route('payment.checkout') }}" method="POST" enctype="multipart/form-data">
@@ -26,13 +25,7 @@
 
                         <div class="shadow-sm bg-white p-4 rounded mb-4">
                             <div class="row">
-
-                                <div class="col-lg-12">
-                                    
-                                    {{-- <div style="padding-top: 0" class="sms">
-                                        চেকআউট সম্পর্কিত সমস্যা হলে যোগাযোগ
-                                        করুন এই নাম্বারে
-                                        <a href="tel:{{ get_setting('contact_phone') }}" class="fw-600">{{ get_setting('contact_phone') }}</a></div> --}}
+                            <div class="col-lg-12">
                                     <div class="row">
                                         <div class="col-md-7 font_24_mobile">
                                             <h2 class="fw-700 ">Shipping Address</h2>
